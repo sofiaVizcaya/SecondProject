@@ -1,5 +1,6 @@
 from MatrixMul import matrixMultiply
 from Matrix import complexMatrixMultiply
+import numpy
 def complexMatrixProbability(Matrix, Vector, CLicks = 1):
     for i in range (0, Clicks):
         if i == 0:
@@ -15,6 +16,7 @@ def amountofMarbles(Matrix, Vector, Clicks = 1):
         else:
             Total = matrixMultiply(Matrix, Total)
     return Total
+
 def probabilityAfterClicks(Matrix, Vector, Clicks = 1):
     for i in range (0, Clicks):
         if i == 0:
