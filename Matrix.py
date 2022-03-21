@@ -2,14 +2,7 @@ from Complex1 import complex_mult
 from Complex1 import complex_sum
 from Complex1 import conjugate
 from Complex1 import complex_phase
-def complex_sum (A, B):
-    real = A[0] + B[0]
-    Complex = A[1] + B[1]
-    return real, Complex
-def complex_mult(A, B):
-    real = (A[0] * B[0]) + (A[1] * B[1] * -1.0)
-    Complex = (A[0]*B[1]) + (A[1]*B[0])
-    return real, Complex
+
 def add_vector(A,B):
     C = []
     for i in range(0, len(A)):
@@ -96,32 +89,7 @@ def complexInternalProduct(u, v):
         X = complex_mult(u[i], v[i])
         Answer = complex_sum(Answer, X)
     return Answer
-def complexMatrixProbability(Matrix, Vector, Clicks = 1):
-    for i in range (0, Clicks):
-        if i == 0:
-            Total = complexMatrixMultiply(Matrix, Vector)
-        else:
-            Total = complexMatrixMultiply(Matrix, Total)
-    return Total
 
-A = [[[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0],[0.0, 0.0], [0.0, 0.0]],
-     [[0.7071, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0],[0.0, 0.0], [0.0, 0.0]],
-     [[0.7071, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0],[0.0, 0.0], [0.0, 0.0]],
-     [[0.0, 0.0], [-0.4082, 0.4082], [0.0, 0.0], [1.0, 0.0], [0.0, 0.0], [0.0, 0.0],[0.0, 0.0], [0.0, 0.0]],
-     [[0.0, 0.0], [-0.4082, -0.4082], [0.0, 0.0], [0.0, 0.0], [1.0, 0.0], [0.0, 0.0],[0.0, 0.0], [0.0, 0.0]],
-     [[0.0, 0.0], [0.4082, -0.4082], [-0.4082, 0.4082], [0.0, 0.0], [0.0, 0.0], [1.0, 0.0],[0.0, 0.0], [0.0, 0.0]],
-     [[0.0, 0.0], [0.0, 0.0], [-0.4082, -0.4082], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0],[1.0, 0.0], [0.0, 0.0]],
-     [[0.0, 0.0], [0.0, 0.0], [0.4082, -0.4082], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0],[0.0, 0.0], [1.0, 0.0]]]
-B = [[[1.0 ,0]],
-     [[0, 0]],
-     [[0, 0]],
-     [[0, 0]],
-     [[0, 0]],
-     [[0, 0]],
-     [[0, 0]],
-     [[0, 0]]]
-print(complexMatrixProbability(A, B, 2))
-C = [1, 2]
-D = [[1, 2]]
+
 
 

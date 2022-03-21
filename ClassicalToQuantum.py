@@ -36,6 +36,4 @@ def graphProbability(A):
     plt.savefig("GraphProbability.png")
     plt.show()
 
-Matrix = [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 1] ,[0, 0, 0, 1, 0, 0] ,[0, 0, 1, 0, 0, 0], [1, 0, 0, 0, 1, 0]]
-Vector = [[6], [2], [1], [5], [3], [10]]
-print(amountofMarbles(Matrix, Vector, 1))
+
