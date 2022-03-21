@@ -27,7 +27,7 @@ def conjugate(A):
 def complex_polar2carte(A):
     p = module(A)
     t = math.atan(A[1]/A[0])
-return p, t
+    return p, t
 
 def complex_phase(A):
     return math.atan(A[1]/A[0])

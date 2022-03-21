@@ -20,3 +20,23 @@ def complexMatrixComplement(A, B, i, j):
         Answer = complex_sum(Answer, X)
     return Answer
     
+def AmountofMarbles(Matrix, Vector, Clicks=0):
+    for i in range (0, Clicks):
+        if i == 0:
+            Total = matrixMultiply(Matrix, Vector)
+        else:
+            Total = matrixMultiply(Matrix, Total)
+    return Total
+
+def probabilityAfterClicks(Matrix, Vector, Clicks = 1):
+    for i in range (0, Clicks):
+        if i == 0:
+            Total = matrixMultiply(Matrix, Vector)
+        else:
+            Total = matrixMultiply(Matrix, Total)
+    return Total
+
+M = [[0, 1/6, 5/6], [1/3, 1/2, 1/6], [2/3, 1/3, 0]]
+V = [[1/6], [1/6], [2/3]]
+print(probabilityAfterClicks(M, V, 3))
+

@@ -1,5 +1,65 @@
-"""This project is a library for complex numbers.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+About from CLassicalToQuantum
 
-Functions:
+First I'll start by introducing you to what the function AmountofMarbles does. It takes 3 inputs.
+-The first one is a matrix .Type-> [[]]
+-The second one is a vector .Type->[]
+-The third one is the amount of clicks taken as an integer.Type->int
 
-"""
+The function will take a matrix that describes the way the marbles move according to the book
+'Quantum Computing for Computer Scientists' on chapter 3 section 1. The marbles move from the column to the row that is in the marble.
+That means that if I have a matrix A and I look at the position A[0,1] = 1, the marble moves from position 1 to position 0.
+
+Our vector tells us how many marbles we have on the position it is at. Example: We have a vector X=[2, 3, 1, 0, 5] so. The vector indicates
+the amount of marbles there are at 0 clicks.
+Look at vector X. we have 2 marbles on X[0] , so that means we have 2 marbles on position 0.On the position 2 we have 1 marble.
+Now, the number of clicks is the amount of times we use the matrix that describes the way the marbles move, to see how many marble
+we have after a n amount time of moving them.
+
+Example:
+I have the matrix M = [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 1] ,[0, 0, 0, 1, 0, 0] ,[0, 0, 1, 0, 0, 0], [1, 0, 0, 0, 1, 0]]
+I also have a vector V = [[6], [2], [1], [5], [3], [10]]
+and I decide to try it at one click
+When I call the function it will look like:
+AmountofMarbles(M, V, 1)
+let's try using print to see what happens
+print(AmountofMarbles(M, V, 1))
+We get the following:
+[[0], [0], [12], [5], [1], [9]]
+That means that after one click we have 0 marbles on position 0, or 0 marbles on position 1, 12 marbles on position 2.
+If I try 3 clicks my function should be:
+print(AmountofMarbles(M, V, 3))
+The result should look like
+[[0], [0], [1],
+[5], [9], [12]]
+
+To try it use the code on MatrixMul or try using ClassicalToQuantum.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Now I'll introduce you to the function probabilityAfterClicks.
+This function receives 3 parameters Matrix, Vector and Clicks. Make sure that the size of them is compatible. The number of the rows of
+Matrix must be the same as the number of Columns of Vector. In this case we recommend to use a Matrix or a vector in either of first 2
+parameters but make sure they are compatible. Try reading 'Quantum Computing for Computer Scientists' on chapter 3 section 2.
+
+Example:
+We have a matrix M = [[0, 1/6, 5/6], [1/3, 1/2, 1/6], [2/3, 1/3, 0]]
+We have a vector V = [[1/6], [1/6], [2/3]]
+We want to try at 1 click
+
+Our function is
+probabilityAfterClicks(M, V, 1)
+We print our answer
+print(probabilityAfterClicks(M, V, 1))
+and we get
+[[0.5833333333333334], [0.25], [0.16666666666666666]]
+
+Let's try with 3 clicks using the same example
+
+Our function is
+probabilityAfterClicks(M, V, 3)
+We print our answer
+print(probabilityAfterClicks(M, V, 1))
+and we get
+[[0.4513888888888889], [0.3125], [0.2361111111111111]]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
