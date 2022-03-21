@@ -63,3 +63,48 @@ and we get
 [[0.4513888888888889], [0.3125], [0.2361111111111111]]
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Function complexMatrixProbability
+in this function we do the same as we did in probability after clicks just that we use complex number instead. We will have the same parameters:
+-Matrix(Matrix or vector)
+-Vector(Matrix or vector)
+-Clicks (integer)
+
+Make sure you write the complex numbers as expected in this library. [real number, imaginary number]
+if it is a real number then you must write the number like this [real number, 0] since the imaginary part is equal to 0.
+
+Example:
+We have a Matrix A and a vector B
+A = [[[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0],[0.0, 0.0], [0.0, 0.0]],
+     [[0.7071, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0],[0.0, 0.0], [0.0, 0.0]],
+     [[0.7071, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0],[0.0, 0.0], [0.0, 0.0]],
+     [[0.0, 0.0], [-0.4082, 0.4082], [0.0, 0.0], [1.0, 0.0], [0.0, 0.0], [0.0, 0.0],[0.0, 0.0], [0.0, 0.0]],
+     [[0.0, 0.0], [-0.4082, -0.4082], [0.0, 0.0], [0.0, 0.0], [1.0, 0.0], [0.0, 0.0],[0.0, 0.0], [0.0, 0.0]],
+     [[0.0, 0.0], [0.4082, -0.4082], [-0.4082, 0.4082], [0.0, 0.0], [0.0, 0.0], [1.0, 0.0],[0.0, 0.0], [0.0, 0.0]],
+     [[0.0, 0.0], [0.0, 0.0], [-0.4082, -0.4082], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0],[1.0, 0.0], [0.0, 0.0]],
+     [[0.0, 0.0], [0.0, 0.0], [0.4082, -0.4082], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0],[0.0, 0.0], [1.0, 0.0]]]
+B = [[[1.0 ,0]],
+     [[0, 0]],
+     [[0, 0]],
+     [[0, 0]],
+     [[0, 0]],
+     [[0, 0]],
+     [[0, 0]],
+     [[0, 0]]]
+we will use this example for one click
+The right way to use the function in this case is:
+complexMatrixProbability(A, B, 1)
+We ask for the program to print:
+print(complexMatrixProbability(A, B, 1))
+and we get:
+[[(0.0, 0.0)], [(0.7071, 0.0)], [(0.7071, 0.0)], [(0.0, 0.0)], [(0.0, 0.0)], [(0.0, 0.0)], [(0.0, 0.0)], [(0.0, 0.0)]]
+What this means is that after one click we are still dealing with real numbers
+
+Using the same A and B again and changing the number of clicks to 2 we get:
+The right way to use the function is:
+complexMatrixProbability(A, B, 2)
+We ask for the program to print:
+print(complexMatrixProbability(A, B, 2))
+and we get:
+[[(0.0, 0.0)], [(0.0, 0.0)], [(0.0, 0.0)], [(-0.28863822, 0.28863822)], [(-0.28863822, -0.28863822)], [(0.0, 0.0)], [(-0.28863822, -0.28863822)], [(0.28863822, -0.28863822)]]
+
+Now we have a complex answer after 2 clicks.
