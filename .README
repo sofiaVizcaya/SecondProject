@@ -108,3 +108,7 @@ and we get:
 [[(0.0, 0.0)], [(0.0, 0.0)], [(0.0, 0.0)], [(-0.28863822, 0.28863822)], [(-0.28863822, -0.28863822)], [(0.0, 0.0)], [(-0.28863822, -0.28863822)], [(0.28863822, -0.28863822)]]
 
 Now we have a complex answer after 2 clicks.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Function graphProbability
+This last part allows us to create an image of a vector given. It might not work for graphs above 3 dimensions. It takes a vector and plots what it gets.
+It as well saves the plot as an image as GraphProbability.png. It probably doesn't work with all the complex numbers.
